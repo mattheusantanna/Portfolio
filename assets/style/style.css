@@ -1,0 +1,193 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 1.125rem;
+	height: 100vh;
+	display: -moz-grid;
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	background-color: black;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	gap: 45px;
+}
+
+#container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	width: 90%;
+	max-width: 1100px;
+	align-items: center;
+	gap: 2rem;
+
+}
+
+.hero img {
+	width: 350px;
+	height: 350px;
+	object-fit: cover;
+	clip-path: circle(50% at 50% 50%);
+	filter: grayscale(1);
+	transition: all 500mc ease-in-out;
+}
+
+.hero img:hover,
+.hero img:focus {
+	filter: grayscale(0);
+}
+
+.author {
+	margin-bottom: 2rem;
+}
+
+.name {
+	font-size: 900;
+	font-size: 2rem;
+}
+
+.location {
+	font-weight: 400;
+}
+
+p {
+	margin-bottom: 1rem;
+	text-align: justify;
+}
+
+.media-social {
+	width: 400px;
+	background-color: white;
+	border-radius: 15px;
+	margin-bottom: 1rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	gap: 1rem;
+}
+
+.img-icon {
+	padding-left: 10px;
+	padding-top: 4px;
+	width: 60px;
+}
+
+.img-icon:hover {
+	opacity: 0.8;
+}
+
+.projects {
+	padding-bottom: 20px;
+	text-align: center;
+	color: rgb(17, 201, 0);
+
+}
+
+#html-skill {
+	color: #F16529;
+}
+
+#css-skill {
+	color: #28A9DF;
+}
+
+#js-skill {
+	color: #F8E017;
+}
+
+#firebase-skill {
+	color: #EEC03E;
+}
+
+.btns {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.btn {
+	background-color: grey;
+	color: white;
+	border: initial;
+	font-size: 1.125rem;
+	font-family: 'IBM Plex Mono', monospace;
+	padding: 0.8rem 2.5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: green;
+	color: black;
+}
+
+.btn:active {
+	text-decoration-line: underline;
+	color: green;
+	background-color: white;
+}
+
+@media(max-width: 960px) {
+	#container {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.btns {
+		justify-content: center;
+	}
+
+	.media-social {
+		justify-content: center;
+	}
+
+	.media-container {
+		display: flex;
+		justify-content: center;
+
+	}
+}
+
+@media(max-width: 450px) {
+	.hero img {
+		width: 250px;
+		heigth: 250px;
+	}
+
+	.media-social {
+		justify-content: center;
+	}
+
+	.media-container {
+
+		width: 380px;
+		display: flex;
+		justify-content: center;
+
+	}
+
+	ul {
+		gap: 5px;
+	}
+
+}
